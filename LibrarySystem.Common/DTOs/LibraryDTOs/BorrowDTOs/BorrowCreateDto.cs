@@ -8,8 +8,6 @@ namespace LibrarySystem.Common.DTOs.Library.Borrows
 {
     public class BorrowCreateDto
     {
-        [Required]
-        public int UserId { get; set; }
 
         [Required]
         public int BookCopyId { get; set; }

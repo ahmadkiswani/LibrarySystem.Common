@@ -1,24 +1,21 @@
-﻿using System.Linq.Expressions;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
-namespace LibrarySystem.Domain.Repositories.IRepo
+namespace LibrarySystem.Common.Repositories
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IRepository<TEntity>
     {
-        Task<T?> GetByIdAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
+        IQueryable<TEntity> GetQueryable();
 
-        Task<List<T>> FindAsync(Expression<Func<T, bool>> predicate);
+        Task AddAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
+        void SoftDelete(TEntity entity);
 
-        Task<List<T>> FindAsync(
-            Expression<Func<T, bool>> predicate,
-            Func<IQueryable<T>, IQueryable<T>> include
-        );
+        Task<TEntity?> GetByIdAsync(int id);
+        Task<TEntity?> GetFirstAsync(Expression<Func<TEntity, bool>> predicate);
 
-        IQueryable<T> GetQueryable();
-
-        Task AddAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task SoftDeleteAsync(T entity);
-
+        Task SaveAsync();
     }
+
+
 }

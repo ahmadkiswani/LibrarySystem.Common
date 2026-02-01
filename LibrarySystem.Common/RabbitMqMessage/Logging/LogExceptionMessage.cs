@@ -10,6 +10,6 @@ namespace LibrarySystem.Common.Messaging
         public string? StackTrace { get; set; }
         public string? Request { get; set; }
         public string? Response { get; set; }
-        public string ErrorType { get; set; } = "Exception";
+        public string? ErrorType { get; set; }
     }
 }
