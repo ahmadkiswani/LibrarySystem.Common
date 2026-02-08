@@ -1,4 +1,4 @@
-﻿namespace LibrarySystem.Common.Messaging
+namespace LibrarySystem.Common.Messaging
 {
     public static class LibraryExchanges
     {
@@ -10,5 +10,6 @@
         public const string UserCreated = "users.created";
         public const string UserUpdated = "users.updated";
         public const string UserDeactivated = "users.deactivated";
+        public const string UserReactivated = "users.reactivated";
     }
 }

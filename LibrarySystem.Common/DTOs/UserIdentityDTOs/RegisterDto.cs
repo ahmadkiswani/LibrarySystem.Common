@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace LibrarySystem.Common.DTOs.UserIdentity.Auth
 
@@ -14,5 +14,6 @@ namespace LibrarySystem.Common.DTOs.UserIdentity.Auth
         [Required(ErrorMessage = "Username is required")]
         public string UserName { get; set; } = string.Empty;
 
+        public string? Role { get; set; }
     }
 }

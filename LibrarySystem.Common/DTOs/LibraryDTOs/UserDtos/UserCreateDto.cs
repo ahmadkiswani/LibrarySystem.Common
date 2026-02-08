@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace LibrarySystem.Common.DTOs.Library.Users;
@@ -14,4 +14,5 @@ namespace LibrarySystem.Common.DTOs.Library.Users;
         [StringLength(120)]
         public string UserEmail { get; set; } = string.Empty;
         public int ExternalUserId { get; set; }
+        public string? RoleName { get; set; }
     }

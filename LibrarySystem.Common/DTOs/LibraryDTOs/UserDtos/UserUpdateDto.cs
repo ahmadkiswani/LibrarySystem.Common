@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace LibrarySystem.Common.DTOs.Library.Users
 {
@@ -17,7 +14,7 @@ namespace LibrarySystem.Common.DTOs.Library.Users
         [EmailAddress]
         [StringLength(120)]
         public string UserEmail { get; set; } = string.Empty;
-
+        public string? RoleName { get; set; }
     }
 
 }

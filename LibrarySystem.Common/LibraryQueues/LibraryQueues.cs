@@ -1,4 +1,4 @@
-﻿
+
 
 namespace LibrarySystem.Common.Messaging
 {
@@ -7,7 +7,6 @@ namespace LibrarySystem.Common.Messaging
         public const string UserCreated = "libraryConsumer-user-created";
         public const string UserUpdated = "libraryConsumer-user-updated";
         public const string UserDeactivated = "libraryConsumer-user-deactivated";
-
-
+        public const string UserReactivated = "libraryConsumer-user-reactivated";
     }
 }

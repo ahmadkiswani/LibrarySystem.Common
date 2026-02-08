@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace LibrarySystem.Common.DTOs.UserIdentity.Auth
-
 {
     public class UpdateUserDto
     {
@@ -9,12 +8,13 @@ namespace LibrarySystem.Common.DTOs.UserIdentity.Auth
         public int UserId { get; set; }
 
         [Required]
+        [StringLength(40, MinimumLength = 2)]
         public string UserName { get; set; } = string.Empty;
 
         [Required, EmailAddress]
+        [StringLength(120)]
         public string Email { get; set; } = string.Empty;
 
-        [Required]
-        public int UserTypeId { get; set; }
+        public string? Role { get; set; }
     }
 }
