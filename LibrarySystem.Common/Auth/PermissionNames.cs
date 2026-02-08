@@ -13,6 +13,7 @@ public static class PermissionNames
     public const string BorrowCreate = "borrow.create";
     public const string BorrowReturn = "borrow.return";
     public const string BorrowApprove = "borrow.approve";
+    public const string ReportView = "report.view";
 
     public static string FromPermission(Permission permission)
     {
@@ -28,6 +29,7 @@ public static class PermissionNames
             Permission.BorrowCreate => BorrowCreate,
             Permission.BorrowReturn => BorrowReturn,
             Permission.BorrowApprove => BorrowApprove,
+            Permission.ReportView => ReportView,
             _ => string.Empty
         };
     }

@@ -14,5 +14,6 @@ public enum Permission
     BorrowView,
     BorrowCreate,
     BorrowReturn,
-    BorrowApprove
+    BorrowApprove,
+    ReportView
 }
