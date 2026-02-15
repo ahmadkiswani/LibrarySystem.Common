@@ -1,6 +1,5 @@
 namespace LibrarySystem.Common.Auth;
 
-
 public static class PermissionNames
 {
     public const string UserManage = "user.manage";
